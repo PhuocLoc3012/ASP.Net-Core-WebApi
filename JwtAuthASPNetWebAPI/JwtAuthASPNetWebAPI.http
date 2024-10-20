@@ -1,0 +1,6 @@
+@JwtAuthASPNetWebAPI_HostAddress = http://localhost:5096
+
+GET {{JwtAuthASPNetWebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

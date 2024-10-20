@@ -1,0 +1,417 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\resetpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\otherobjects\\emailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\otherobjects\\emailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\otherobjects\\staticuserroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\otherobjects\\staticuserroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\authserviceresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\authserviceresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\forgotpassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\email\\emailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\email\\emailrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\updatepermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\updatepermissiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dbcontext\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\core\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\core\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\migrations\\20241009094715_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\migrations\\20241009094715_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\migrations\\20241009095123_init1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\migrations\\20241009095123_init1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|d:\\programming\\cshape\\jwtauthaspnetwebapi\\jwtauthaspnetwebapi\\migrations\\20241010143759_update-user-entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8F971500-3B67-4937-B1F7-90BCD946C7B2}|JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI.csproj|solutionrelative:jwtauthaspnetwebapi\\migrations\\20241010143759_update-user-entity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Services\\AuthService.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Services\\AuthService.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Services\\AuthService.cs",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAuwN8AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T15:02:47.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAAYwGwAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:20:57.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StaticUserRoles.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\OtherObjects\\StaticUserRoles.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\OtherObjects\\StaticUserRoles.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\OtherObjects\\StaticUserRoles.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\OtherObjects\\StaticUserRoles.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:15:11.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailConfiguration.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\OtherObjects\\EmailConfiguration.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\OtherObjects\\EmailConfiguration.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\OtherObjects\\EmailConfiguration.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\OtherObjects\\EmailConfiguration.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAcAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T15:47:36.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Interfaces\\IAuthService.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Interfaces\\IAuthService.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Interfaces\\IAuthService.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Interfaces\\IAuthService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wAwAAABaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:57:11.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Program.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Program.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Program.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAkwCsAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T08:45:08.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Services\\EmailService.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Services\\EmailService.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Services\\EmailService.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAzwBUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T15:57:30.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\appsettings.json",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\appsettings.json",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\appsettings.json",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAUwBkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-09T08:58:33.758Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResetPasswordDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\ResetPasswordDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\ResetPasswordDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\ResetPasswordDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\ResetPasswordDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T14:49:41.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Controllers\\EmailController.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Controllers\\EmailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T16:33:48.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthServiceResponseDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\AuthServiceResponseDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\AuthServiceResponseDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\AuthServiceResponseDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\AuthServiceResponseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:56:28.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Interfaces\\IEmailService.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Interfaces\\IEmailService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T15:57:16.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ForgotPasswordDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\ForgotPasswordDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\ForgotPasswordDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\ForgotPasswordDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\ForgotPasswordDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T07:25:52.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmailRequest.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\Email\\EmailRequest.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\Email\\EmailRequest.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\Email\\EmailRequest.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\Email\\EmailRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T16:27:18.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\LoginDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:09:05.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Entities\\ApplicationUser.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Entities\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:19:57.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdatePermissionDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\UpdatePermissionDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\UpdatePermissionDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\UpdatePermissionDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\UpdatePermissionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:12:16.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationDBContext.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\DbContext\\ApplicationDBContext.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\DbContext\\ApplicationDBContext.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\DbContext\\ApplicationDBContext.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\DbContext\\ApplicationDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T08:54:54.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20241010143759_update-user-entity.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241010143759_update-user-entity.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Migrations\\20241010143759_update-user-entity.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241010143759_update-user-entity.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Migrations\\20241010143759_update-user-entity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBJwAcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T14:37:59.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Core\\Dtos\\RegisterDto.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Core\\Dtos\\RegisterDto.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Core\\Dtos\\RegisterDto.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwAsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:07:28.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAABBwBcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T08:13:01.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20241009094715_init.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241009094715_init.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Migrations\\20241009094715_init.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241009094715_init.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Migrations\\20241009094715_init.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAQwAsAAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:47:16.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20241009095123_init1.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241009095123_init1.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\Migrations\\20241009095123_init1.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\Migrations\\20241009095123_init1.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\Migrations\\20241009095123_init1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T09:51:23.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "JwtAuthASPNetWebAPI\\WeatherForecast.cs",
+              "ToolTip": "D:\\Programming\\CShape\\JwtAuthASPNetWebAPI\\JwtAuthASPNetWebAPI\\WeatherForecast.cs",
+              "RelativeToolTip": "JwtAuthASPNetWebAPI\\WeatherForecast.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T08:45:02.131Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

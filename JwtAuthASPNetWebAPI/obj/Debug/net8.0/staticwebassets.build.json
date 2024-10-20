@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "wJvEA3LM0N9RXWIGAcaqkHetN35peNV8nhcBCIfhbXY=",
+  "Source": "JwtAuthASPNetWebAPI",
+  "BasePath": "_content/JwtAuthASPNetWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
