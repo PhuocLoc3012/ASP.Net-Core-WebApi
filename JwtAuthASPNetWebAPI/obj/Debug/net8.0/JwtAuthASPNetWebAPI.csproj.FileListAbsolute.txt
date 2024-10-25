@@ -146,3 +146,4 @@ D:\Programming\CShape\JwtAuthASPNetWebAPI\JwtAuthASPNetWebAPI\obj\Debug\net8.0\r
 D:\Programming\CShape\JwtAuthASPNetWebAPI\JwtAuthASPNetWebAPI\obj\Debug\net8.0\JwtAuthASPNetWebAPI.pdb
 D:\Programming\CShape\JwtAuthASPNetWebAPI\JwtAuthASPNetWebAPI\obj\Debug\net8.0\JwtAuthASPNetWebAPI.genruntimeconfig.cache
 D:\Programming\CShape\JwtAuthASPNetWebAPI\JwtAuthASPNetWebAPI\obj\Debug\net8.0\ref\JwtAuthASPNetWebAPI.dll
+D:\Programming\CShape\JwtAuthASPNetWebAPI\JwtAuthASPNetWebAPI\obj\Debug\net8.0\JwtAuthASPNetWebAPI.sourcelink.json

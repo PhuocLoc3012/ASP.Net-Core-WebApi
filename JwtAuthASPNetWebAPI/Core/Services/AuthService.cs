@@ -53,7 +53,9 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             var userRoles = await _userManager.GetRolesAsync(user);
 
 
-            //Claim: Là một mẩu thông tin về người dùng hoặc hệ thống được mã hóa trong token. Các claim có thể chứa thông tin như tên người dùng, vai trò, ID, hoặc bất kỳ thông tin nào khác liên quan đến người dùng. Trong JWT, các claim được tổ chức dưới dạng các cặp key-value. Ví dụ, một claim có thể trông như thế này: "Name": "JohnDoe".
+            //Claim: Là một mẩu thông tin về người dùng hoặc hệ thống được mã hóa trong token.
+            //Các claim có thể chứa thông tin như tên người dùng, vai trò, ID, hoặc bất kỳ thông tin nào khác liên quan đến người dùng.
+            //Trong JWT, các claim được tổ chức dưới dạng các cặp key-value. Ví dụ, một claim có thể trông như thế này: "Name": "JohnDoe".
             var authClaims = new List<Claim>
             {
 

@@ -44,7 +44,7 @@ namespace JwtAuthASPNetWebAPI.Controllers
             var registerResult = await _authService.RegisterAsync(registerDto);
             if (registerResult.IsSuccess)
             {
-                return Ok(registerResult);
+                return StatusCode(StatusCodes.Status201Created, registerResult);
             }
             return BadRequest(registerResult);
         }

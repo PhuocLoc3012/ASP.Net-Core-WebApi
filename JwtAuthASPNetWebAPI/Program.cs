@@ -38,13 +38,19 @@ namespace JwtAuthASPNetWebAPI
                 .AddDefaultTokenProviders();
 
 
+
+            //* PHẦN NÀY CỦA BÊN EMAIL====================================================
+
             // Cấu hình thời gian sống cho token (ví dụ: token reset mật khẩu, xác nhận email)
             builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
             {
                 options.TokenLifespan = TimeSpan.FromHours(1); // Thời gian sống của token là 1 giờ
             });
+            //* PHẦN NÀY CỦA BÊN EMAIL====================================================
 
-            //Config Idetity
+
+
+            //Config Identity
 
             builder.Services.Configure<IdentityOptions>(options => {
                 options.Password.RequiredLength = 8;
@@ -94,6 +100,14 @@ namespace JwtAuthASPNetWebAPI
 
 
 
+            //Add CORS
+            builder.Services.AddCors(p => p.AddPolicy("MyCors", build =>
+            {
+                //build.WithOrigins("https://test.infor", "https://localhost:3000");
+                build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+            }));
+
+
 
             //pipeline
             var app = builder.Build();
@@ -107,7 +121,7 @@ namespace JwtAuthASPNetWebAPI
 
             app.UseHttpsRedirection();
 
-
+            app.UseCors("MyCors");// CORS
             app.UseAuthentication();
             app.UseAuthorization();
 
