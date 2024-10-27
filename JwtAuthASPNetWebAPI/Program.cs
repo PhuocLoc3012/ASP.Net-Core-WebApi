@@ -3,6 +3,7 @@ using JwtAuthASPNetWebAPI.Core.Entities;
 using JwtAuthASPNetWebAPI.Core.Interfaces;
 using JwtAuthASPNetWebAPI.Core.OtherObjects;
 using JwtAuthASPNetWebAPI.Core.Services;
+using JwtAuthASPNetWebAPI.Utils;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -101,13 +102,15 @@ namespace JwtAuthASPNetWebAPI
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             // Add services to the container.
-
+            builder.Services.AddScoped<TokenProvider>();
 
             // Email configuration
             var emailConfig = builder.Configuration
                 .GetSection("EmailConfiguration")
                 .Get<EmailConfiguration>();
             builder.Services.AddSingleton(emailConfig);
+
+           
 
 
 

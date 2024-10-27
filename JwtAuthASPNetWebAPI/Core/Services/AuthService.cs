@@ -1,8 +1,10 @@
 ﻿using Google.Apis.Auth;
 using JwtAuthASPNetWebAPI.Core.Dtos;
+using JwtAuthASPNetWebAPI.Core.Dtos.ApiResponse;
 using JwtAuthASPNetWebAPI.Core.Entities;
 using JwtAuthASPNetWebAPI.Core.Interfaces;
 using JwtAuthASPNetWebAPI.Core.OtherObjects;
+using JwtAuthASPNetWebAPI.Utils;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
@@ -20,32 +22,34 @@ namespace JwtAuthASPNetWebAPI.Core.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         public readonly IConfiguration _configuration;
         public readonly IEmailService _emailService;
-        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IEmailService emailService)
+        private readonly TokenProvider _tokenProvider;
+        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IEmailService emailService, TokenProvider tokenProvider)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _emailService = emailService;
+            _tokenProvider = tokenProvider; 
         }
 
 
-        public async Task<AuthServiceResponseDto> LoginAsync(LoginDto loginDto)
+        public async Task<ApiResponse> LoginAsync(LoginDto loginDto)
         {
             var user = await _userManager.FindByNameAsync(loginDto.Username);
             if (user is null)
             {
                 return
-                new AuthServiceResponseDto
+                new ApiResponse
                 {
                     IsSuccess = false,
-                    Message = "Invalid credentials"
+                    Message = "Invalid Credentials"
                 };
             }
             var isPasswordCorrect = await _userManager.CheckPasswordAsync(user, loginDto.Password);
             if (!isPasswordCorrect)
             {
                 return
-                new AuthServiceResponseDto
+                new ApiResponse
                 {
                     IsSuccess = false,
                     Message = "Invalid Credentials"
@@ -57,58 +61,60 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             //Claim: Là một mẩu thông tin về người dùng hoặc hệ thống được mã hóa trong token.
             //Các claim có thể chứa thông tin như tên người dùng, vai trò, ID, hoặc bất kỳ thông tin nào khác liên quan đến người dùng.
             //Trong JWT, các claim được tổ chức dưới dạng các cặp key-value. Ví dụ, một claim có thể trông như thế này: "Name": "JohnDoe".
-            var authClaims = new List<Claim>
-            {
+            //var authClaims = new List<Claim>
+            //{
 
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.NameIdentifier,user.UserName),
-                new Claim("JWTID", Guid.NewGuid().ToString()),
-                new Claim("Firstname", user.Firstname),
-                new Claim("Lastname", user.Lastname),
+            //    new Claim(ClaimTypes.Name, user.UserName),
+            //    new Claim(ClaimTypes.NameIdentifier,user.UserName),
+            //    new Claim("JWTID", Guid.NewGuid().ToString()),
+            //    new Claim("Firstname", user.Firstname),
+            //    new Claim("Lastname", user.Lastname),
 
 
-            };
-            foreach (var userRole in userRoles)
-            {
-                authClaims.Add(new Claim(ClaimTypes.Role, userRole));
-            }
-            var token = GenerateNewJsonWebToken(authClaims);
-            return new AuthServiceResponseDto()
+            //};
+            //foreach (var userRole in userRoles)
+            //{
+            //    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
+            //}
+            //var token = GenerateNewJsonWebToken(authClaims);
+            var token = _tokenProvider.GenerateToken(user);
+            return new ApiResponse()
             {
                 IsSuccess = true,
-                Message = token
+                Message = "Authentication success",
+                Data = token
             };
         }
 
-        public async Task<AuthServiceResponseDto> MakeAdminAsync(UpdatePermissionDto updatePermissionDto)
+        public async Task<ApiResponse> MakeAdminAsync(UpdatePermissionDto updatePermissionDto)
         {
             var user = await _userManager.FindByNameAsync(updatePermissionDto.Username);
             if (user is null)
             {
-                return new AuthServiceResponseDto { IsSuccess = false, Message = "Invalid Username!" };
+                return new ApiResponse { IsSuccess = false, Message = "Invalid Username!" };
             }
             await _userManager.AddToRoleAsync(user, StaticUserRoles.ADMIN);
-            return new AuthServiceResponseDto { IsSuccess = true, Message = "User is now an ADMIN" };
+            return new ApiResponse { IsSuccess = true, Message = "User is now an ADMIN" };
         }
 
-        public async Task<AuthServiceResponseDto> MakeOwnerAsync(UpdatePermissionDto updatePermissionDto)
+        public async Task<ApiResponse> MakeOwnerAsync(UpdatePermissionDto updatePermissionDto)
         {
             var user = await _userManager.FindByNameAsync(updatePermissionDto.Username);
             if (user is null)
             {
-                return new AuthServiceResponseDto { IsSuccess = false, Message = "Invalid Username!" };
+                return new ApiResponse { IsSuccess = false, Message = "Invalid Username!" };
             }
             await _userManager.AddToRoleAsync(user, StaticUserRoles.OWNER);
-            return new AuthServiceResponseDto { IsSuccess = true, Message = "User is now an OWNER" };
+            return new ApiResponse { IsSuccess = true, Message = "User is now an OWNER" };
         }
 
-        public async Task<AuthServiceResponseDto> RegisterAsync(RegisterDto registerDto)
+        public async Task<ApiResponse> RegisterAsync(RegisterDto registerDto)
         {
             var isExistsUser = await _userManager.FindByNameAsync(registerDto.Username);
             if (isExistsUser != null)
             {
                 return
-                new AuthServiceResponseDto
+                new ApiResponse
                 {
                     IsSuccess = false,
                     Message = "Username is already exits"
@@ -131,7 +137,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                 {
                     errorString += "#" + error.Description;
                 }
-                return new AuthServiceResponseDto
+                return new ApiResponse
                 {
                     IsSuccess = false,
                     Message = errorString
@@ -139,14 +145,14 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             }
             //Add a default User role to all users
             await _userManager.AddToRoleAsync(newUser, StaticUserRoles.USER);
-            return new AuthServiceResponseDto
+            return new ApiResponse
             {
                 IsSuccess = true,
                 Message = "User created successfully"
             };
         }
 
-        public async Task<AuthServiceResponseDto> SeedRoleAsync()
+        public async Task<ApiResponse> SeedRoleAsync()
         {
             bool isOwnerRoleExists = await _roleManager.RoleExistsAsync(StaticUserRoles.OWNER);
             bool isAdminRoleExists = await _roleManager.RoleExistsAsync(StaticUserRoles.ADMIN);
@@ -154,7 +160,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
 
             if (isOwnerRoleExists && isAdminRoleExists && isUserRoleExists)
             {
-                return new AuthServiceResponseDto()
+                return new ApiResponse()
                 {
                     IsSuccess = true,
                     Message = "Roles seeding is already done",
@@ -166,7 +172,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.USER));
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.ADMIN));
             await _roleManager.CreateAsync(new IdentityRole(StaticUserRoles.OWNER));
-            return new AuthServiceResponseDto
+            return new ApiResponse
             {
                 IsSuccess = true,
                 Message = "Role Seeding done successfully"
@@ -191,12 +197,12 @@ namespace JwtAuthASPNetWebAPI.Core.Services
 
         }
 
-        public async Task<AuthServiceResponseDto> ForgotPassword(ForgotPasswordDto forgotPasswordDto)
+        public async Task<ApiResponse> ForgotPassword(ForgotPasswordDto forgotPasswordDto)
         {
             var user = await _userManager.FindByEmailAsync(forgotPasswordDto.Email);
             if (user == null)
             {
-                return new AuthServiceResponseDto
+                return new ApiResponse
                 {
                     IsSuccess = false,
                     Message = "Email is invalid"
@@ -211,19 +217,19 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             };
             var callback = QueryHelpers.AddQueryString(forgotPasswordDto.ClientUri!, param);
             await _emailService.Send(forgotPasswordDto.Email, "Reset password", callback);
-            return new AuthServiceResponseDto
+            return new ApiResponse
             {
                 IsSuccess = true,
                 Message = "Send reset password successfully!"
             };
         }
 
-        public async Task<AuthServiceResponseDto> ResetPassword(ResetPasswordDto resetPasswordDto)
+        public async Task<ApiResponse> ResetPassword(ResetPasswordDto resetPasswordDto)
         {
             var user = await _userManager.FindByEmailAsync(resetPasswordDto.Email!);
             if (user is null)
             {
-                return new AuthServiceResponseDto
+                return new ApiResponse
                 {
                     IsSuccess = false,
                     Message = "Invalid email!"
@@ -234,13 +240,13 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             if (!rs.Succeeded)
             {
                 var errorMessages = string.Join(", ", rs.Errors.Select(e => e.Description));
-                return new AuthServiceResponseDto
+                return new ApiResponse
                 {
                     IsSuccess = false,
                     Message = errorMessages
                 };
             }
-            return new AuthServiceResponseDto
+            return new ApiResponse
             {
                 IsSuccess = true,
                 Message = "Successfull!"
@@ -250,7 +256,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
 
 
 
-        public async Task<AuthServiceResponseDto> LoginWithGoogleAsync(string googleToken)
+        public async Task<ApiResponse> LoginWithGoogleAsync(string googleToken)
         {
             var settings = new GoogleJsonWebSignature.ValidationSettings
             {
@@ -266,7 +272,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             }
             catch
             {
-                return new AuthServiceResponseDto
+                return new ApiResponse  
                 {
                     IsSuccess = false,
                     Message = "Invalid Google token."
@@ -289,7 +295,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                 var result = await _userManager.CreateAsync(user);
                 if (!result.Succeeded)
                 {
-                    return new AuthServiceResponseDto
+                    return new ApiResponse
                     {
                         IsSuccess = false,
                         Message = "Failed to create user."
@@ -319,7 +325,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             // Tạo JWT
             var token = GenerateNewJsonWebToken(claims);
 
-            return new AuthServiceResponseDto
+            return new ApiResponse
             {
                 IsSuccess = true,
                 Message = token
