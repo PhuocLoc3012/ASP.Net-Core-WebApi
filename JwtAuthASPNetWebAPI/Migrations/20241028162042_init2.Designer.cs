@@ -4,6 +4,7 @@ using JwtAuthASPNetWebAPI.Core.DbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace JwtAuthASPNetWebAPI.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241028162042_init2")]
+    partial class init2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -74,9 +77,6 @@ namespace JwtAuthASPNetWebAPI.Migrations
 
                     b.Property<string>("RefreshToken")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("RefreshTokenExpiration")
-                        .HasColumnType("datetime2");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");

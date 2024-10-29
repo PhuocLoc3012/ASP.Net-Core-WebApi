@@ -120,12 +120,12 @@ namespace JwtAuthASPNetWebAPI.Controllers
             return Ok(rs);
         }
 
-        [HttpGet("login-google")]
-        public IActionResult LoginWithGoogle()
-        {
-            var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
-            return Challenge(properties, GoogleDefaults.AuthenticationScheme);
-        }
+        //[HttpGet("login-google")]
+        //public IActionResult LoginWithGoogle()
+        //{
+        //    var properties = new AuthenticationProperties { RedirectUri = Url.Action("GoogleResponse") };
+        //    return Challenge(properties, GoogleDefaults.AuthenticationScheme);
+        //}
 
         [HttpGet("google-response")]
         public async Task<IActionResult> GoogleResponse()

@@ -101,6 +101,7 @@ namespace JwtAuthASPNetWebAPI
             //Inject app Dependecies (Dependency Injection)
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
+            builder.Services.AddScoped<ITokenService, TokenService>();  
             // Add services to the container.
             builder.Services.AddScoped<TokenProvider>();
 

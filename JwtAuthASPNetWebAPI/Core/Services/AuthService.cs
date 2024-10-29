@@ -22,14 +22,15 @@ namespace JwtAuthASPNetWebAPI.Core.Services
         private readonly RoleManager<IdentityRole> _roleManager;
         public readonly IConfiguration _configuration;
         public readonly IEmailService _emailService;
-        private readonly TokenProvider _tokenProvider;
-        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IEmailService emailService, TokenProvider tokenProvider)
+        //private readonly TokenProvider _tokenProvider;
+        private readonly ITokenService _tokenService;
+        public AuthService(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration, IEmailService emailService, ITokenService tokenService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _emailService = emailService;
-            _tokenProvider = tokenProvider; 
+            _tokenService = tokenService;
         }
 
 
@@ -55,9 +56,6 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                     Message = "Invalid Credentials"
                 };
             }
-            var userRoles = await _userManager.GetRolesAsync(user);
-
-
             //Claim: Là một mẩu thông tin về người dùng hoặc hệ thống được mã hóa trong token.
             //Các claim có thể chứa thông tin như tên người dùng, vai trò, ID, hoặc bất kỳ thông tin nào khác liên quan đến người dùng.
             //Trong JWT, các claim được tổ chức dưới dạng các cặp key-value. Ví dụ, một claim có thể trông như thế này: "Name": "JohnDoe".
@@ -77,7 +75,8 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             //    authClaims.Add(new Claim(ClaimTypes.Role, userRole));
             //}
             //var token = GenerateNewJsonWebToken(authClaims);
-            var token = _tokenProvider.GenerateToken(user);
+            var userRoles = await _userManager.GetRolesAsync(user);
+            var token = await _tokenService.GenerateToken(user, userRoles);
             return new ApiResponse()
             {
                 IsSuccess = true,
@@ -331,5 +330,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                 Message = token
             };
         }
+
+
     }
 }

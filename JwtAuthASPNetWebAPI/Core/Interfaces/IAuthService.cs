@@ -1,5 +1,6 @@
 ﻿using JwtAuthASPNetWebAPI.Core.Dtos;
 using JwtAuthASPNetWebAPI.Core.Dtos.ApiResponse;
+using JwtAuthASPNetWebAPI.Core.OtherObjects;
 
 namespace JwtAuthASPNetWebAPI.Core.Interfaces
 {
@@ -15,5 +16,6 @@ namespace JwtAuthASPNetWebAPI.Core.Interfaces
         Task<ApiResponse> ResetPassword(ResetPasswordDto resetPasswordDto);
 
         Task<ApiResponse> LoginWithGoogleAsync(string googleToken);
+
     }
 }
