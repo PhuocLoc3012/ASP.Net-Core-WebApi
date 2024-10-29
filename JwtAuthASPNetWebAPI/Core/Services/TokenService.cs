@@ -142,8 +142,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
 
         public void SetTokenInsideCookie(TokenModel tokenModel, HttpContext context)
         {
-            context.Response.Cookies.Append("accessToken", tokenModel.AccessToken);
-            new CookieOptions
+            var accessTokenOptions = new CookieOptions
             {
                 Expires = DateTime.UtcNow.AddMinutes(5),
                 HttpOnly = true,
@@ -151,8 +150,8 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                 Secure = true,
                 SameSite = SameSiteMode.None,
             };
-            context.Response.Cookies.Append("refreshToken", tokenModel.RefreshToken);
-            new CookieOptions
+
+            var refreshTokenOptions = new CookieOptions
             {
                 Expires = DateTime.UtcNow.AddDays(7),
                 HttpOnly = true,
@@ -160,6 +159,9 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                 Secure = true,
                 SameSite = SameSiteMode.None,
             };
+
+            context.Response.Cookies.Append("accessToken", tokenModel.AccessToken, accessTokenOptions);
+            context.Response.Cookies.Append("refreshToken", tokenModel.RefreshToken, refreshTokenOptions);
 
         }
 
