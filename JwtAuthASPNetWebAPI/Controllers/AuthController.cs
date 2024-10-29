@@ -23,12 +23,14 @@ namespace JwtAuthASPNetWebAPI.Controllers
     {
         private readonly IAuthService _authService;
         private readonly IEmailService _emailService;
+        private readonly ITokenService _tokenService;
         private readonly UserManager<ApplicationUser> _userManager;
-        public AuthController(IAuthService authService, UserManager<ApplicationUser> userManager,IEmailService emailService)
+        public AuthController(IAuthService authService, UserManager<ApplicationUser> userManager,IEmailService emailService, ITokenService tokenService)
         {
             _authService = authService;
             _emailService = emailService;
             _userManager = userManager;
+            _tokenService = tokenService;
         }
         //Route for seeding my roles to DB
         [HttpPost]
@@ -61,6 +63,8 @@ namespace JwtAuthASPNetWebAPI.Controllers
             var loginResult = await _authService.LoginAsync(loginDto);
             if (loginResult.IsSuccess)
             {
+                
+                _tokenService.SetTokenInsideCookie((TokenModel)loginResult.Data, HttpContext);
                 return Ok(loginResult);
             }
             return Unauthorized(loginResult);

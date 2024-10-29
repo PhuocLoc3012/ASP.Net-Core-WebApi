@@ -76,12 +76,12 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             //}
             //var token = GenerateNewJsonWebToken(authClaims);
             var userRoles = await _userManager.GetRolesAsync(user);
-            var token = await _tokenService.GenerateToken(user, userRoles);
+            var tokenModel = await _tokenService.GenerateToken(user, userRoles);
             return new ApiResponse()
             {
                 IsSuccess = true,
                 Message = "Authentication success",
-                Data = token
+                Data = tokenModel
             };
         }
 

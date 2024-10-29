@@ -140,5 +140,28 @@ namespace JwtAuthASPNetWebAPI.Core.Services
 
         }
 
+        public void SetTokenInsideCookie(TokenModel tokenModel, HttpContext context)
+        {
+            context.Response.Cookies.Append("accessToken", tokenModel.AccessToken);
+            new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddMinutes(5),
+                HttpOnly = true,
+                IsEssential = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+            };
+            context.Response.Cookies.Append("refreshToken", tokenModel.RefreshToken);
+            new CookieOptions
+            {
+                Expires = DateTime.UtcNow.AddDays(7),
+                HttpOnly = true,
+                IsEssential = true,
+                Secure = true,
+                SameSite = SameSiteMode.None,
+            };
+
+        }
+
     }
 }

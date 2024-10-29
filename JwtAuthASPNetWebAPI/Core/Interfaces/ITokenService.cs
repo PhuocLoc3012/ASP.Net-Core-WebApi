@@ -9,5 +9,6 @@ namespace JwtAuthASPNetWebAPI.Core.Interfaces
         Task<TokenModel> GenerateToken(ApplicationUser user, IEnumerable<string> roles);
         Task<ClaimsPrincipal> GetPrincipalFromExpiredToken(string accessToken);
         Task<TokenModel> RefreshToken(TokenModel tokenModel);
+        void SetTokenInsideCookie(TokenModel tokenModel, HttpContext context);
     }
 }

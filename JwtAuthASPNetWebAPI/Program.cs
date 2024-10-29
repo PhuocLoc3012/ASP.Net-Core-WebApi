@@ -86,6 +86,16 @@ namespace JwtAuthASPNetWebAPI
                         ValidAudience = builder.Configuration["Jwt:ValidAudience"],
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Secret"]))
                     };
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = ctx =>
+                        {
+                            ctx.Request.Cookies.TryGetValue("accessToken", out var accessToken);
+                            if (!string.IsNullOrEmpty(accessToken))
+                                ctx.Token = accessToken;
+                            return Task.CompletedTask;
+                        }
+                    };
                 })
                 //Auth Google
                 .AddGoogle(options => 

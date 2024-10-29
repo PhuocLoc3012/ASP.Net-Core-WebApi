@@ -15,9 +15,14 @@ namespace JwtAuthASPNetWebAPI.Controllers
             _tokenService = tokenService;
         }
         [HttpPost("refresh")]
-        public async Task<IActionResult> Refresh([FromBody] TokenModel tokenModel)
+        public async Task<IActionResult> Refresh()
         {
-            var newToken = await _tokenService.RefreshToken(tokenModel);
+            HttpContext.Request.Cookies.TryGetValue("accessToken", out var accessToken);
+            HttpContext.Request.Cookies.TryGetValue("refreshToken", out var refreshToken);
+            var tokenModel = new TokenModel { AccessToken = accessToken, RefreshToken = refreshToken };
+            var newToken =  await _tokenService.RefreshToken(tokenModel);
+
+            _tokenService.SetTokenInsideCookie(newToken, HttpContext);
             return Ok(newToken);
         }
     }
