@@ -1,6 +1,7 @@
 ﻿using Google.Apis.Auth;
 using JwtAuthASPNetWebAPI.Core.Dtos;
 using JwtAuthASPNetWebAPI.Core.Dtos.ApiResponse;
+using JwtAuthASPNetWebAPI.Core.Dtos.Email;
 using JwtAuthASPNetWebAPI.Core.Entities;
 using JwtAuthASPNetWebAPI.Core.Interfaces;
 using JwtAuthASPNetWebAPI.Core.OtherObjects;
@@ -142,13 +143,35 @@ namespace JwtAuthASPNetWebAPI.Core.Services
                     Message = errorString
                 };
             }
-            //Add a default User role to all users
+            // Add a default User role to all users
             await _userManager.AddToRoleAsync(newUser, StaticUserRoles.USER);
+
+            // Generate email confirmation token
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+
+            // Create a confirmation link
+            var confirmationLink = $"http://localhost:3000/confirm-email?userId={newUser.Id}&token={Uri.EscapeDataString(token)}";
+
+            // Send confirmation email
+            await _emailService.Send(newUser.Email, "Email Confirmation",
+                $"Please confirm your email by clicking on the following link: {confirmationLink}");
+
             return new ApiResponse
             {
                 IsSuccess = true,
-                Message = "User created successfully"
+                Message = "User created successfully. Please check your email to confirm your account."
             };
+        }
+
+
+        public async Task ConfirmEmail(EmailConfirmationRequest confirmationRequest)
+        {
+            var user = await _userManager.FindByIdAsync(confirmationRequest.userId);
+            if (user is null)
+            {
+                throw new Exception("User not found");
+            }
+            var rs = await _userManager.ConfirmEmailAsync(user, confirmationRequest.token);
         }
 
         public async Task<ApiResponse> SeedRoleAsync()

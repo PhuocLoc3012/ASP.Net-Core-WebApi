@@ -43,7 +43,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
             {
                 //claims: đặc trưng của ng dùng
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.UtcNow.AddMinutes(1),
+                Expires = DateTime.UtcNow.AddMinutes(15),
                 Issuer = _configuration["Jwt:ValidIssuer"],
                 Audience = _configuration["Jwt:ValidAudience"],
                 //Kí
@@ -144,7 +144,7 @@ namespace JwtAuthASPNetWebAPI.Core.Services
         {
             var accessTokenOptions = new CookieOptions
             {
-                Expires = DateTime.UtcNow.AddMinutes(5),
+                Expires = DateTime.UtcNow.AddMinutes(15),
                 HttpOnly = true,
                 IsEssential = true,
                 Secure = true,

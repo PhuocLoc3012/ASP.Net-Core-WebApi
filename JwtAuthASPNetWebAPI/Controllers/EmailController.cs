@@ -1,6 +1,7 @@
 ﻿using JwtAuthASPNetWebAPI.Core.Dtos.Email;
 using JwtAuthASPNetWebAPI.Core.Interfaces;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JwtAuthASPNetWebAPI.Controllers
@@ -32,5 +33,19 @@ namespace JwtAuthASPNetWebAPI.Controllers
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
+
+        //[HttpGet("confirm-email")]
+        //public async Task<IActionResult> ConfirmEmail(string userId, string token)
+        //{
+        //    var user = await _userManager.FindByIdAsync(userId);
+        //    if (user == null)
+        //        return BadRequest("Invalid User ID");
+
+        //    var result = await _userManager.ConfirmEmailAsync(user, token);
+        //    if (result.Succeeded)
+        //        return Ok("Email confirmed successfully");
+
+        //    return BadRequest("Email confirmation failed");
+        //}
     }
 }
