@@ -3,6 +3,7 @@ using JwtAuthASPNetWebAPI.Core.Entities;
 using JwtAuthASPNetWebAPI.Core.Interfaces;
 using JwtAuthASPNetWebAPI.Core.OtherObjects;
 using JwtAuthASPNetWebAPI.Core.Services;
+using JwtAuthASPNetWebAPI.Jobs;
 using JwtAuthASPNetWebAPI.Utils;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.Google;
@@ -10,7 +11,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Quartz;
 using System.Text;
+
+using Quartz.Spi;
 
 namespace JwtAuthASPNetWebAPI
 {
@@ -112,9 +116,11 @@ namespace JwtAuthASPNetWebAPI
             builder.Services.AddScoped<IAuthService, AuthService>();
             builder.Services.AddScoped<IEmailService, EmailService>();
             builder.Services.AddScoped<ITokenService, TokenService>();  
+            builder.Services.AddScoped<IUserService, UserService>();
+
             // Add services to the container.
             builder.Services.AddScoped<TokenProvider>();
-
+            builder.Services.AddScoped<DeleteUnconfirmedUsersJob> ();
             // Email configuration
             var emailConfig = builder.Configuration
                 .GetSection("EmailConfiguration")
@@ -133,6 +139,22 @@ namespace JwtAuthASPNetWebAPI
             }));
 
 
+            // Thêm Quartz vào container DI
+            builder.Services.AddQuartz(q =>
+            {
+                // Sử dụng Microsoft Dependency Injection để tạo Job
+                q.UseMicrosoftDependencyInjectionJobFactory();
+
+                // Định nghĩa Job và Trigger
+                q.ScheduleJob<DeleteUnconfirmedUsersJob>(trigger => trigger
+                    .WithIdentity("DeleteUnconfirmedUsersTrigger")
+                    .StartNow()
+                    .WithSimpleSchedule(x => x.WithIntervalInHours(24).RepeatForever())
+                );
+            });
+
+
+
 
             ////Đây là authentication Google
 
@@ -149,6 +171,13 @@ namespace JwtAuthASPNetWebAPI
             //    options.ClientSecret = builder.Configuration["Google:ClientSecret"];
             //})
             //    ;
+
+
+
+            //Add jobs
+
+
+
 
 
             //pipeline
@@ -171,6 +200,36 @@ namespace JwtAuthASPNetWebAPI
             app.MapControllers();
 
             app.Run();
+
+
+
+        }
+
+
+    }
+
+    // Hosted Service to manage Quartz lifecycle
+    public class QuartzHostedService : IHostedService
+    {
+        private readonly ISchedulerFactory _schedulerFactory;
+        private readonly IScheduler _scheduler;
+
+        public QuartzHostedService(ISchedulerFactory schedulerFactory)
+        {
+            _schedulerFactory = schedulerFactory;
+            _scheduler = _schedulerFactory.GetScheduler().Result;
+        }
+
+        public async Task StartAsync(CancellationToken cancellationToken)
+        {
+            // Start the Quartz scheduler
+            await _scheduler.Start(cancellationToken);
+        }
+
+        public async Task StopAsync(CancellationToken cancellationToken)
+        {
+            // Shutdown the Quartz scheduler
+            await _scheduler.Shutdown(cancellationToken);
         }
     }
 }
