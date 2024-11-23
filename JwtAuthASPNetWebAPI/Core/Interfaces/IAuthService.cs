@@ -1,5 +1,6 @@
 ﻿using JwtAuthASPNetWebAPI.Core.Dtos;
 using JwtAuthASPNetWebAPI.Core.Dtos.ApiResponse;
+using JwtAuthASPNetWebAPI.Core.Dtos.Email;
 using JwtAuthASPNetWebAPI.Core.OtherObjects;
 
 namespace JwtAuthASPNetWebAPI.Core.Interfaces
@@ -15,6 +16,7 @@ namespace JwtAuthASPNetWebAPI.Core.Interfaces
         Task<ApiResponse> ForgotPassword (ForgotPasswordDto forgotPasswordDto);
         Task<ApiResponse> ResetPassword(ResetPasswordDto resetPasswordDto);
 
+        Task ConfirmEmail(EmailConfirmationRequest confirmationRequest);
         Task<ApiResponse> LoginWithGoogleAsync(string googleToken);
 
     }

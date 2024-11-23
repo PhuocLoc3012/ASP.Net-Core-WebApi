@@ -14,6 +14,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Security.Claims;
 using System.Text;
 using JwtAuthASPNetWebAPI.Core.Dtos.GoogleDto;
+using JwtAuthASPNetWebAPI.Core.Dtos.Email;
 
 namespace JwtAuthASPNetWebAPI.Controllers
 {
@@ -53,6 +54,19 @@ namespace JwtAuthASPNetWebAPI.Controllers
             }
             return BadRequest(registerResult);
         }
+
+        [HttpPost("confirm-email")]
+        public async Task<IActionResult> ConfirmEmail(EmailConfirmationRequest emailConfirmationRequest)
+        {
+            await _authService.ConfirmEmail(emailConfirmationRequest);
+            return Ok();
+        }
+
+
+
+
+
+
 
         // Route --> Login
         [HttpPost]
